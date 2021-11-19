@@ -1,0 +1,15 @@
+.homepage {
+	.hero {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	.content-container {
+		position: absolute;
+		top: 280px;
+		left: 355px;
+		display: flex;
+		flex-direction: column;
+	}
+}
