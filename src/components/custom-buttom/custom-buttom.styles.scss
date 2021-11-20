@@ -13,18 +13,29 @@ button {
 		background-color: #147a73;
 	}
 	&.bookmark {
+		padding-left: 71px;
 		background-color: rgba(47, 47, 47, 0.05);
 		color: #7a7a7a;
-		span.icon {
+		text-align: center;
+		svg.icon {
 			position: absolute;
 			left: 0;
 			top: 0;
-			background: url(../../assets/icon-bookmark.svg) no-repeat;
 			width: 56px;
 			height: 56px;
 		}
-		&:active > span.icon > g > circle {
+		&:active > svg.icon > g > circle {
 			fill: #707070;
+		}
+		&.bookmarked {
+			background-color: rgba(20, 122, 115, 0.05);
+			color: #147a73;
+			svg.icon circle {
+				fill: #147a73;
+			}
+			svg.icon path {
+				fill: #fff;
+			}
 		}
 	}
 }
