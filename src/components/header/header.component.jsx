@@ -4,7 +4,10 @@ import { ReactComponent as Logo } from "../../assets/logo.svg";
 import "./header.styles.scss";
 
 const Header = () => (
-	<div className="homepage">
+	<div
+		className="hero"
+		style={{ backgroundImage: "url(/image-hero-desktop.jpg)" }}
+	>
 		<div className="header">
 			<Logo />
 			<div className="nav">

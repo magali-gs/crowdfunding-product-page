@@ -14,7 +14,7 @@ const DetailsModal = ({ projectOverview }) => {
 					</p>
 				</div>
 				<div className="details-item">
-					<h6>$ {projectOverview.totalBackers.toLocaleString()}</h6>
+					<h6>{projectOverview.totalBackers.toLocaleString()}</h6>
 					<p>total backers</p>
 				</div>
 				<div className="details-item">
