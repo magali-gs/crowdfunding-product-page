@@ -7,17 +7,18 @@ const DetailsModal = ({ projectOverview }) => {
 		<div className="details-modal">
 			<div className="details">
 				<div className="details-item">
-					<p>$ {projectOverview.projectBacked.toLocaleString()}</p>
+					<h6>$ {projectOverview.projectBacked.toLocaleString()}</h6>
 					<p>
-						of $ {projectOverview.projectCost.toLocaleString()} backed
+						of $ {projectOverview.projectCost.toLocaleString()}{" "}
+						backed
 					</p>
 				</div>
 				<div className="details-item">
-					<p>$ {projectOverview.totalBackers.toLocaleString()}</p>
+					<h6>$ {projectOverview.totalBackers.toLocaleString()}</h6>
 					<p>total backers</p>
 				</div>
 				<div className="details-item">
-					<p>{projectOverview.daysLeft}</p>
+					<h6>{projectOverview.daysLeft}</h6>
 					<p>days left</p>
 				</div>
 			</div>

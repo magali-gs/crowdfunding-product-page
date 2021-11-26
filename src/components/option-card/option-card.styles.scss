@@ -1,0 +1,40 @@
+.card {
+	height: 248px;
+	padding: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 1px solid rgba(0, 0, 0, 0.0497193);
+	border-radius: 8px;
+	background-color: #fff;
+	.content {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	&-header {
+		p {
+			color: #3cb3ab;
+			font-size: 15px;
+			font-weight: 500;
+		}
+	}
+	&-details {
+		align-items: center;
+		h5 {
+			font-size: 32px;
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			span {
+				font-family: "Roboto";
+				font-style: normal;
+				font-weight: normal;
+				font-size: 15px;
+			}
+		}
+	}
+	.disable {
+		opacity: 0.5;
+	}
+}

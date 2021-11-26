@@ -1,4 +1,5 @@
 .homepage {
+	min-height: 100vh;
 	.hero {
 		position: absolute;
 		top: 0;
@@ -9,6 +10,7 @@
 		position: absolute;
 		top: 280px;
 		left: 355px;
+		max-width: 730px;
 		display: flex;
 		flex-direction: column;
 		gap: 24px;

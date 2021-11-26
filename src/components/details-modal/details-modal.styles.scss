@@ -18,12 +18,10 @@
 			justify-content: space-between;
 			p {
 				font-size: 15px;
-				color: #7A7A7A;
-				&:first-of-type {
-					color: black;
-					font-size: 32px;
-					font-weight: 700;
-				}
+			}
+			h6 {
+				font-size: 32px;
+				font-weight: 700;
 			}
 			&:first-of-type {
 				padding-right: 42px;
@@ -31,7 +29,7 @@
 			}
 			&:nth-of-type(2) {
 				padding: 0 91px 0 47px;
-				border-right: 1px solid rgba(0, 0, 0, 0.15);				
+				border-right: 1px solid rgba(0, 0, 0, 0.15);
 			}
 			&:nth-of-type(3) {
 				padding-left: 47px;
