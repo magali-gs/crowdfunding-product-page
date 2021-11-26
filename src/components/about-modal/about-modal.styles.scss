@@ -2,18 +2,11 @@
 	padding: 48px;
 	border: 1px solid rgba(0, 0, 0, 0.0497193);
 	border-radius: 8px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    .content {
-        p {
-            padding-top: 35px;
-            line-height: 30px;
-        }
-    }
-}
-
-.disable {
-    opacity: 0.5;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	.disable {
+		opacity: 0.5;
+	}
 }

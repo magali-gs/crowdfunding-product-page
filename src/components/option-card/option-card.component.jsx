@@ -1,7 +1,7 @@
 import CustomButtom from "../custom-buttom/custom-buttom.component";
 import "./option-card.styles.scss";
 
-const OptionCard = ({ name, pledge, description, quantity }) => {
+const OptionCard = ({ name, pledge, description, quantity, toggleModal}) => {
 	return (
 		<div className={`card ${!quantity ? "disable" : undefined}`}>
 			<div className="card-header content">
@@ -9,9 +9,12 @@ const OptionCard = ({ name, pledge, description, quantity }) => {
 				<p>Pledge $ {pledge} or more</p>
 			</div>
 			<p>{description}</p>
-			<div className='card-details content'>
-				<h5>{quantity} <span>left</span></h5>
+			<div className="card-details content">
+				<h5>
+					{quantity} <span>left</span>
+				</h5>
 				<CustomButtom
+					onClick={toggleModal}
 					className={!quantity ? "disable" : undefined}
 					disabled={!quantity && true}
 				>

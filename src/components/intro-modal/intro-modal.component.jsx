@@ -6,7 +6,7 @@ import CustomButtom from "../custom-buttom/custom-buttom.component";
 
 import "./intro-modal.styles.scss";
 
-const IntroModal = () => {
+const IntroModal = ({ toggleModal }) => {
 	const [bookmarked, setBookmarked] = useState("false");
 
 	const handleClick = () => {
@@ -25,7 +25,9 @@ const IntroModal = () => {
 					</p>
 				</div>
 				<div className="buttoms">
-					<CustomButtom>Back this project</CustomButtom>
+					<CustomButtom onClick={toggleModal}>
+						Back this project
+					</CustomButtom>
 					<CustomButtom
 						className={`bookmark ${
 							!bookmarked ? "bookmarked" : ""

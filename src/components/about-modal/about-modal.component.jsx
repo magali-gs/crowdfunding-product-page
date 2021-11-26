@@ -1,7 +1,7 @@
 import OptionCard from "../option-card/option-card.component";
 import "./about-modal.styles.scss";
 
-const AboutModal = ({ options }) => {
+const AboutModal = ({ options, toggleModal }) => {
 	return (
 		<div className="about-modal">
 			<div className="content">
@@ -27,6 +27,7 @@ const AboutModal = ({ options }) => {
 					pledge={option.pledge}
 					description={option.description}
 					quantity={option.quantity}
+					toggleModal={toggleModal}
 				/>
 			))}
 		</div>
