@@ -11,21 +11,35 @@ import projectContent from "../assets/content";
 const Homepage = () => {
 	const [project] = useState(projectContent);
 	const [modalIsVisible, setModalIsVisible] = useState(false);
+	const [isChecked, setIsChecked] = useState("");
 
 	const toggleModal = () => {
 		setModalIsVisible(!modalIsVisible);
 	};
 
+	const handleCheck = (e) => {
+		setIsChecked(e)
+		console.log(isChecked)
+	};
+
 	return (
 		<div className="homepage">
 			<Header />
-			{modalIsVisible && <PledgeModal toggleModal={toggleModal} />}
+			{modalIsVisible && (
+				<PledgeModal
+					options={projectContent.options}
+					toggleModal={toggleModal}
+					isChecked={isChecked}
+					handleCheck={handleCheck}
+				/>
+			)}
 			<div className="content-container">
 				<IntroModal toggleModal={toggleModal} />
 				<DetailsModal projectOverview={project.projectOverview} />
 				<AboutModal
 					options={projectContent.options}
 					toggleModal={toggleModal}
+					handleCheck={handleCheck}
 				/>
 			</div>
 		</div>

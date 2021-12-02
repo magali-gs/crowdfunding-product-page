@@ -1,9 +1,10 @@
-import OptionCard from "../option-card/option-card.component";
+import PledgeCard from "../pledge-card/pledge-card.component";
 import { ReactComponent as CloseModal } from "../../assets/icon-close-modal.svg";
 
 import "./pledge-modal.styles.scss";
 
-const PledgeModal = ({ toggleModal }) => {
+const PledgeModal = ({ options, toggleModal, isChecked, handleCheck }) => {
+
 	return (
 		<>
 			<div className="pledge-modal">
@@ -15,18 +16,22 @@ const PledgeModal = ({ toggleModal }) => {
 						Monitor Riser out in the world?
 					</p>
 				</div>
-				{/* {options.map((option, idx) => (
-				<OptionCard
-					key={idx}
-					name={option.name}
-					pledge={option.pledge}
-					description={option.description}
-					quantity={option.quantity}
-					toggleModal={toggleModal}
-				/>
-			))} */}
+				<div className="pledge-cards">
+					{options.map((option, idx) => (
+						<PledgeCard
+							key={idx}
+							name={option.name}
+							pledge={option.pledge}
+							description={option.description}
+							quantity={option.quantity}
+							toggleModal={toggleModal}
+							isChecked={isChecked}
+							handleCheck={handleCheck}
+						/>
+					))}
+				</div>
 			</div>
-            <div className='overlay'></div>
+			<div className="overlay"></div>
 		</>
 	);
 };

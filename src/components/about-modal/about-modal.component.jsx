@@ -1,10 +1,10 @@
 import OptionCard from "../option-card/option-card.component";
 import "./about-modal.styles.scss";
 
-const AboutModal = ({ options, toggleModal }) => {
+const AboutModal = ({ options, toggleModal, handleCheck }) => {
 	return (
 		<div className="about-modal">
-			<div className="content">
+			<div className="about-modal__content">
 				<h3>About this project</h3>
 				<p>
 					The Mastercraft Bamboo Monitor Riser is a sturdy and stylish
@@ -20,16 +20,20 @@ const AboutModal = ({ options, toggleModal }) => {
 					notepads, pens, and USB sticks to be stored under the stand.
 				</p>
 			</div>
-			{options.map((option, idx) => (
-				<OptionCard
-					key={idx}
-					name={option.name}
-					pledge={option.pledge}
-					description={option.description}
-					quantity={option.quantity}
-					toggleModal={toggleModal}
-				/>
-			))}
+			{options.map(
+				(option, idx) =>
+					option.pledge && (
+						<OptionCard
+							key={idx}
+							name={option.name}
+							pledge={option.pledge}
+							description={option.description}
+							quantity={option.quantity}
+							toggleModal={toggleModal}
+							handleCheck={handleCheck}
+						/>
+					)
+			)}
 		</div>
 	);
 };

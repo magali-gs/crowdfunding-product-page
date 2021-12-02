@@ -1,11 +1,11 @@
 .pledge-modal {
 	display: flex;
 	flex-direction: column;
+	gap: 24px;
 	position: absolute;
 	width: 730px;
-	height: 905px;
 	top: 15rem;
-	padding: 48px;
+	padding: 32px 48px;
 	background-color: #fff;
 	border: 1px solid rgba(0, 0, 0, 0.0497193);
 	border-radius: 8px;
@@ -15,15 +15,32 @@
 		align-self: flex-end;
 		path {
 			opacity: 1;
+			fill: #979797;
 		}
+	}
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 17px;
+		h3 {
+			font-size: 24px;
+		}
+	}
+	.disable {
+		opacity: 0.5;
+	}
+	.pledge-cards {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
 	}
 }
 .overlay {
 	position: fixed;
 	top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100vh;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.5);
 }

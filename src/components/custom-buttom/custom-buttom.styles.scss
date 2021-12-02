@@ -9,7 +9,9 @@ button {
 	font-weight: bold;
 	line-height: 20px;
 	cursor: pointer;
-	&:active {
+	transition: 0.1s all ease-in-out;
+	&:hover {
+		transition: 0.1s all ease-in-out;
 		background-color: #147a73;
 	}
 	&.bookmark {
@@ -17,6 +19,7 @@ button {
 		background-color: rgba(47, 47, 47, 0.05);
 		color: #7a7a7a;
 		text-align: center;
+		transition: 0.1s all ease-in-out;
 		svg.icon {
 			position: absolute;
 			left: 0;
@@ -24,7 +27,8 @@ button {
 			width: 56px;
 			height: 56px;
 		}
-		&:active > svg.icon > g > circle {
+		&:hover > svg.icon > g > circle {
+			transition: 0.1s all ease-in-out;
 			fill: #707070;
 		}
 		&.bookmarked {
