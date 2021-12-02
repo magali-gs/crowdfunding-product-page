@@ -33,12 +33,19 @@ button {
 		}
 		&.bookmarked {
 			background-color: rgba(20, 122, 115, 0.05);
-			color: #147a73;
+			color: #3cb3ab;
 			svg.icon circle {
-				fill: #147a73;
+				fill: #3cb3ab;
 			}
 			svg.icon path {
 				fill: #fff;
+			}
+			&:hover {
+				color: #147a73;
+			}
+			&:hover > svg.icon > g > circle {
+				transition: 0.1s all ease-in-out;
+				fill: #147a73;
 			}
 		}
 	}

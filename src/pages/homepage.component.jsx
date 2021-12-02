@@ -19,7 +19,6 @@ const Homepage = () => {
 
 	const handleCheck = (e) => {
 		setIsChecked(e)
-		console.log(isChecked)
 	};
 
 	return (

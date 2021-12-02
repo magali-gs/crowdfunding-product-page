@@ -12,8 +12,9 @@ const PledgeCard = ({
 	return (
 		<div
 			className={`pledge-card ${
-				(!quantity && pledge ? "disable" : undefined )||
-			(isChecked === name && 'selected')}`}
+				(!quantity && pledge ? "disable" : undefined) ||
+				(isChecked === name && "selected")
+			}`}
 		>
 			<div className="pledge-card__content">
 				<input
@@ -22,6 +23,7 @@ const PledgeCard = ({
 					value={name}
 					checked={isChecked === name}
 					onChange={() => handleCheck(name)}
+					disabled={!quantity && pledge && true}
 				/>
 				<div className="header">
 					<div>
@@ -47,8 +49,12 @@ const PledgeCard = ({
 							type="number"
 							min={pledge ? pledge : 1}
 							defaultValue={pledge ? pledge : 1}
-							/>
+						/>
 						<CustomButtom
+							className={
+								!quantity && pledge ? "disable" : undefined
+							}
+							disabled={!quantity && pledge && true}
 							style={{
 								width: "100px",
 								height: "48px",

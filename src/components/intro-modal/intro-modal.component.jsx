@@ -1,13 +1,13 @@
 import { useState } from "react";
-
 import { ReactComponent as LogoMasterCraft } from "../../assets/logo-mastercraft.svg";
 import { ReactComponent as Bookmark } from "../../assets/icon-bookmark.svg";
 import CustomButtom from "../custom-buttom/custom-buttom.component";
+import useStickyState from "../../hooks/useStickyState";
 
 import "./intro-modal.styles.scss";
 
 const IntroModal = ({ toggleModal }) => {
-	const [bookmarked, setBookmarked] = useState("false");
+	const [bookmarked, setBookmarked] = useStickyState(false, "bookmarked");
 
 	const handleClick = () => {
 		setBookmarked(!bookmarked);
@@ -29,13 +29,11 @@ const IntroModal = ({ toggleModal }) => {
 						Back this project
 					</CustomButtom>
 					<CustomButtom
-						className={`bookmark ${
-							!bookmarked ? "bookmarked" : ""
-						}`}
+						className={`bookmark ${bookmarked ? "bookmarked" : ""}`}
 						onClick={handleClick}
 					>
 						<Bookmark className="icon" />
-						{!bookmarked ? "Bookmarked" : "Bookmark"}
+						{bookmarked ? "Bookmarked" : "Bookmark"}
 					</CustomButtom>
 				</div>
 			</div>
