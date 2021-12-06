@@ -4,21 +4,40 @@ import IntroModal from "../components/intro-modal/intro-modal.component";
 import DetailsModal from "../components/details-modal/details-modal.component";
 import AboutModal from "../components/about-modal/about-modal.component";
 import PledgeModal from "../components/pledge-modal/pledge-modal.component";
+import CompleteModal from "../components/complete-modal/complete-modal.component";
 
 import "./homepage.styles.scss";
 import projectContent from "../assets/content";
 
 const Homepage = () => {
-	const [project] = useState(projectContent);
+	const [project, setProject] = useState(projectContent);
 	const [modalIsVisible, setModalIsVisible] = useState(false);
+	const [completeModalIsVisible, setCompleteModalIsVisible] = useState(false);
 	const [isChecked, setIsChecked] = useState("");
 
 	const toggleModal = () => {
 		setModalIsVisible(!modalIsVisible);
 	};
+	const toggleCompleteModal = () => {
+		setCompleteModalIsVisible(!completeModalIsVisible);
+		setModalIsVisible(false);
+	};
 
 	const handleCheck = (e) => {
-		setIsChecked(e)
+		setIsChecked(e);
+	};
+
+	const handleUpdateProject = (cause, value) => {
+		setCompleteModalIsVisible(true);
+		setModalIsVisible(false);
+		const newProject = { ...project };
+		newProject.projectOverview.totalBackers += 1;
+		newProject.projectOverview.projectBacked += value;
+		newProject.options.forEach((option) => {
+			if (option.name === cause) option.quantity -= 1;
+		});
+		console.log(typeof value)
+		setProject(newProject)
 	};
 
 	return (
@@ -30,7 +49,11 @@ const Homepage = () => {
 					toggleModal={toggleModal}
 					isChecked={isChecked}
 					handleCheck={handleCheck}
+					handleUpdateProject={handleUpdateProject}
 				/>
+			)}
+			{completeModalIsVisible && (
+				<CompleteModal toggleCompleteModal={toggleCompleteModal} />
 			)}
 			<div className="content-container">
 				<IntroModal toggleModal={toggleModal} />

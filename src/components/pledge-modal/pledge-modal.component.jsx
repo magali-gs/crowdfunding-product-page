@@ -3,8 +3,14 @@ import { ReactComponent as CloseModal } from "../../assets/icon-close-modal.svg"
 
 import "./pledge-modal.styles.scss";
 
-const PledgeModal = ({ options, toggleModal, isChecked, handleCheck }) => {
-
+const PledgeModal = ({
+	options,
+	toggleModal,
+	isChecked,
+	handleCheck,
+	handleSubmit,
+	handleUpdateProject,
+}) => {
 	return (
 		<>
 			<div className="pledge-modal">
@@ -27,6 +33,8 @@ const PledgeModal = ({ options, toggleModal, isChecked, handleCheck }) => {
 							toggleModal={toggleModal}
 							isChecked={isChecked}
 							handleCheck={handleCheck}
+							handleSubmit={handleSubmit}
+							handleUpdateProject={handleUpdateProject}
 						/>
 					))}
 				</div>

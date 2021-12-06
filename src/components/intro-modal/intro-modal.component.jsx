@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ReactComponent as LogoMasterCraft } from "../../assets/logo-mastercraft.svg";
 import { ReactComponent as Bookmark } from "../../assets/icon-bookmark.svg";
 import CustomButtom from "../custom-buttom/custom-buttom.component";
