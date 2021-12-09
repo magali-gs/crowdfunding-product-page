@@ -1,10 +1,9 @@
-import React from "react";
+import { useState } from "react";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { ReactComponent as Menu } from "../../assets/icon-hamburger.svg";
 import { ReactComponent as CloseMneu } from "../../assets/icon-close-menu.svg";
 
 import "./header.styles.scss";
-import { useState } from "react/cjs/react.development";
 
 const Header = () => {
 	const [menuVisible, setMenuVisivle] = useState(false);
