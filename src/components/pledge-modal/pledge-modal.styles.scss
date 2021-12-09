@@ -3,27 +3,41 @@
 	flex-direction: column;
 	gap: 24px;
 	position: absolute;
-	width: 730px;
+	width: 51vw;
 	top: 15rem;
 	padding: 32px 48px;
 	background-color: #fff;
 	border: 1px solid rgba(0, 0, 0, 0.0497193);
 	border-radius: 8px;
 	z-index: 2;
+	&__title {
+		font-size: 1.5rem;
+		grid-area: title;
+	}
+	&__descrip {
+		grid-area: content;
+	}
+	@media screen and (max-width: 800px) {
+		display: grid;
+		grid-template-areas: 
+		"title closebtn"
+		"content content"
+		"cards cards";
+		width: 85vw;
+		padding: 32px 24px;
+		top: 7rem;
+	}
 	.closeBtn {
 		cursor: pointer;
 		align-self: flex-end;
+		grid-area: closebtn;
+		justify-self: flex-end;
+		@media screen and (max-width: 800px) {
+			align-self: center;
+		}
 		path {
 			opacity: 1;
 			fill: #979797;
-		}
-	}
-	.content {
-		display: flex;
-		flex-direction: column;
-		gap: 17px;
-		h3 {
-			font-size: 24px;
 		}
 	}
 	.disable {
@@ -33,14 +47,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 24px;
+		grid-area: cards;
 	}
 }
-.overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	min-height: 100vh;
-	z-index: 1;
-	background-color: rgba(0, 0, 0, 0.5);
-}
+

@@ -32,7 +32,9 @@ const IntroModal = ({ toggleModal }) => {
 						onClick={handleClick}
 					>
 						<Bookmark className="icon" />
-						{bookmarked ? "Bookmarked" : "Bookmark"}
+						<div className="text">
+							{bookmarked ? "Bookmarked" : "Bookmark"}
+						</div>
 					</CustomButtom>
 				</div>
 			</div>

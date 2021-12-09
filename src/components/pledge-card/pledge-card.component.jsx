@@ -24,7 +24,7 @@ const PledgeCard = ({
 	};
 	const handleSubmit = (e) => {
 		const { cause, value } = pledgeSelected;
-		handleUpdateProject(cause, parseInt( value));
+		handleUpdateProject(cause, parseInt(value));
 		e.preventDefault();
 	};
 
@@ -37,6 +37,7 @@ const PledgeCard = ({
 		>
 			<div className="pledge-card__content">
 				<input
+					id={name}
 					type="radio"
 					name="options"
 					value={name}
@@ -44,20 +45,20 @@ const PledgeCard = ({
 					onChange={() => handleCheck(name)}
 					disabled={!quantity && pledge && true}
 				/>
-				<div className="header">
-					<div>
-						<div>
-							<h6>{name}</h6>
-							{pledge && <p>Pledge $ {pledge} or more</p>}
-						</div>
-						{quantity >= 0 && (
-							<h5>
-								{quantity} <span>left</span>
-							</h5>
-						)}
-					</div>
-					<p>{description}</p>
-				</div>
+				<label htmlFor={name} className="pledge-card__content--title">
+					{name}
+				</label>
+				{pledge && (
+					<p className="pledge-card__content--value">
+						Pledge $ {pledge} or more
+					</p>
+				)}
+				{quantity >= 0 && (
+					<h5 className="pledge-card__content--quantity">
+						{quantity} <span>left</span>
+					</h5>
+				)}
+				<p className="pledge-card__content--descrip">{description}</p>
 			</div>
 			{isChecked === name && (
 				<div className={"pledge-card__confirmation"}>

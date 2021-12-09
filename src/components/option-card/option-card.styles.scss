@@ -11,6 +11,10 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		@media screen and (max-width: 800px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 	&-header {
 		p {
@@ -21,6 +25,9 @@
 	}
 	&-details {
 		align-items: center;
+		@media screen and (max-width: 800px) {
+			gap: 24px;
+		}
 		h5 {
 			font-size: 32px;
 			display: flex;
@@ -30,11 +37,19 @@
 				font-family: "Roboto";
 				font-style: normal;
 				font-weight: normal;
-				font-size: 15px;
+				// font-size: 15px;
 			}
+		}
+		button {
+			width: 157px;
+			height: 48px;
+			font-size: 14px;
 		}
 	}
 	.disable {
 		opacity: 0.5;
+	}
+	@media screen and (max-width: 800px) {
+		padding: 24px;
 	}
 }

@@ -6,35 +6,64 @@
 	background-color: #fff;
 	padding: 32px 28px;
 	gap: 24px;
+	@media screen and (max-width: 800px) {
+		padding: 24px;
+	}
 	&__content {
-		display: flex;
-		justify-content: space-between;
-		gap: 24px;
-		align-items: flex-start;
-		.header {
-			display: flex;
-			flex-direction: column;
-			gap: 17px;
-			div {
-				display: flex;
-				div {
-					display: flex;
-					gap: 19px;
-					p {
-						color: #3cb3ab;
-						font-weight: 500;
-					}
-				}
-				h5 {
-					margin-left: auto;
-					span {
-						font-weight: normal;
-						font-size: 15px;
-					}
-				}
+		display: grid;
+		grid-template-areas:
+			"input title value quantity"
+			". descrip descrip descrip";
+		grid-template-columns: 5% auto 1fr auto;
+		grid-column-gap: 20px;
+		grid-row-gap: 17px;
+		@media screen and (max-width: 800px) {
+			grid-template-columns: 10% 1fr;
+			grid-template-rows: auto;
+			grid-template-areas:
+				"input title"
+				"input value"
+				"descrip descrip"
+				"quantity quantity";
+			grid-row-gap: 0;
+		}
+		&--title {
+			color: #000;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 16px;
+			grid-area: title;
+			cursor: pointer;
+			transition: 0.2s all ease-in-out;
+			&:hover {
+				color: #3cb3ab;
+				transition: 0.2s all ease-in-out;
 			}
-			p {
+		}
+		&--value {
+			grid-area: value;
+			color: #3cb3ab;
+			font-weight: 500;
+		}
+		&--descrip {
+			font-size: 15px;
+			grid-area: descrip;
+			@media screen and (max-width: 800px) {
+				padding: 24px 0;
+			}
+		}
+		&--quantity {
+			grid-area: quantity;
+			justify-self: flex-end;
+			font-size: 18px;
+			font-weight: 700;
+			span {
+				font-weight: normal;
 				font-size: 15px;
+			}
+			@media screen and (max-width: 800px) {
+				justify-self: flex-start;
 			}
 		}
 		input[type="radio"] {
@@ -42,6 +71,13 @@
 			min-height: 24px;
 			margin-top: 5px;
 			cursor: pointer;
+			grid-area: input;
+			@media screen and (max-width: 800px) {
+				align-self: center;
+			}
+			&:hover {
+				border: #3cb3ab;
+			}
 		}
 	}
 	&__confirmation {
@@ -58,6 +94,10 @@
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
+			@media screen and (max-width: 800px) {
+				flex-direction: column;
+				gap: 16px;
+			}
 			.info {
 				display: flex;
 				gap: 16px;
@@ -77,6 +117,9 @@
 					&::-webkit-inner-spin-button {
 						-webkit-appearance: none;
 						margin: 0;
+					}
+					&:focus {
+						outline-color: #3cb3ab;
 					}
 					&.error {
 						color: #ff0000;
@@ -104,6 +147,9 @@
 			font-size: 0.75rem;
 			color: #ff0000;
 			font-style: italic;
+			@media screen and (max-width: 800px) {
+				line-height: 100%;
+			}
 		}
 	}
 	&.selected {

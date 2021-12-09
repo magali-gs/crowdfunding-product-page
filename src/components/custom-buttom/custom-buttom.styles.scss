@@ -6,6 +6,7 @@ button {
 	border: none;
 	border-radius: 33.5px;
 	color: #fff;
+	font-size: 0.875rem;
 	font-weight: bold;
 	line-height: 20px;
 	cursor: pointer;
@@ -26,6 +27,9 @@ button {
 			top: 0;
 			width: 56px;
 			height: 56px;
+			@media screen and (max-width: 800px) {
+				position: relative;
+			}
 		}
 		&:hover > svg.icon > g > circle {
 			transition: 0.1s all ease-in-out;
@@ -48,7 +52,17 @@ button {
 				fill: #147a73;
 			}
 		}
+		.text {
+			@media screen and (max-width: 800px) {
+				display: none;
+			}
+		}
+		@media screen and (max-width: 800px) {
+			width: 56px;
+			padding: 0;
+		}
 	}
+
 	&.disable {
 		background-color: rgba(47, 47, 47, 0.5);
 		cursor: auto;

@@ -15,13 +15,11 @@ const PledgeModal = ({
 		<>
 			<div className="pledge-modal">
 				<CloseModal onClick={toggleModal} className="closeBtn" />
-				<div className="content">
-					<h3>Back this project</h3>
-					<p>
-						Want to support us in bringing Mastercraft Bamboo
-						Monitor Riser out in the world?
-					</p>
-				</div>
+				<h3 className="pledge-modal__title">Back this project</h3>
+				<p className="pledge-modal__descrip">
+					Want to support us in bringing Mastercraft Bamboo Monitor
+					Riser out in the world?
+				</p>
 				<div className="pledge-cards">
 					{options.map((option, idx) => (
 						<PledgeCard
