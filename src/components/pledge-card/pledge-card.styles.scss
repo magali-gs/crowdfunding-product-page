@@ -36,6 +36,9 @@
 			grid-area: title;
 			cursor: pointer;
 			transition: 0.2s all ease-in-out;
+			@media screen and (max-width: 800px) {
+				font-size: 14px;
+			}
 			&:hover {
 				color: #3cb3ab;
 				transition: 0.2s all ease-in-out;
@@ -45,12 +48,16 @@
 			grid-area: value;
 			color: #3cb3ab;
 			font-weight: 500;
+			@media screen and (max-width: 800px) {
+				font-size: 14px;
+			}
 		}
 		&--descrip {
 			font-size: 15px;
 			grid-area: descrip;
 			@media screen and (max-width: 800px) {
 				padding: 24px 0;
+				font-size: 14px;
 			}
 		}
 		&--quantity {
@@ -101,42 +108,50 @@
 			.info {
 				display: flex;
 				gap: 16px;
-				input[type="number"] {
-					position: relative;
-					width: 100px;
-					height: 48px;
-					padding: 0 15px;
-					text-align: center;
-					border: 1px solid rgba(0, 0, 0, 0.15);
-					border-radius: 33.5px;
-					font-size: 14px;
-					font-weight: 700;
-					color: #000;
-					-moz-appearance: textfield;
-					&::-webkit-outer-spin-button,
-					&::-webkit-inner-spin-button {
-						-webkit-appearance: none;
-						margin: 0;
-					}
-					&:focus {
-						outline-color: #3cb3ab;
-					}
-					&.error {
-						color: #ff0000;
-						outline: #ff0000;
-						border: 2px solid #ff0000;
-					}
+				@media screen and (max-width: 350px) {
+					flex-wrap: wrap;
+					justify-content: center;
 				}
-				label {
-					position: relative;
-					left: 45px;
-					top: 24px;
-					font-size: 14px;
-					font-family: "Roboto";
-					line-height: 0;
-					z-index: 1;
-					&.error {
-						color: #ff0000;
+				div {
+					display: flex;
+					gap: 10px;
+					input[type="number"] {
+						position: relative;
+						width: 95px;
+						height: 48px;
+						padding: 0 15px;
+						text-align: center;
+						border: 1px solid rgba(0, 0, 0, 0.15);
+						border-radius: 33.5px;
+						font-size: 14px;
+						font-weight: 700;
+						color: #000;
+						-moz-appearance: textfield;
+						&::-webkit-outer-spin-button,
+						&::-webkit-inner-spin-button {
+							-webkit-appearance: none;
+							margin: 0;
+						}
+						&:focus {
+							outline-color: #3cb3ab;
+						}
+						&.error {
+							color: #ff0000;
+							outline: #ff0000;
+							border: 2px solid #ff0000;
+						}
+					}
+					label {
+						position: relative;
+						left: 43px;
+						top: 24px;
+						font-size: 14px;
+						font-family: "Roboto";
+						line-height: 0;
+						z-index: 1;
+						&.error {
+							color: #ff0000;
+						}
 					}
 				}
 			}

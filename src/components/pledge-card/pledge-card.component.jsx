@@ -65,21 +65,23 @@ const PledgeCard = ({
 					<div className="confirmation-content">
 						<p>Enter your pledge</p>
 						<div className="info">
-							<label className={error ? "error" : undefined}>
-								$
-							</label>
-							<input
-								className={error ? "error" : undefined}
-								type="number"
-								min={pledge ? pledge : 1}
-								value={
-									pledgeSelected.value
-										? pledgeSelected.value
-										: 1
-								}
-								name="value"
-								onChange={handleChange}
-							/>
+							<div>
+								<label className={error ? "error" : undefined}>
+									$
+								</label>
+								<input
+									className={error ? "error" : undefined}
+									type="number"
+									min={pledge ? pledge : 1}
+									value={
+										pledgeSelected.value
+											? pledgeSelected.value
+											: 1
+									}
+									name="value"
+									onChange={handleChange}
+								/>
+							</div>
 							<CustomButtom
 								className={
 									(!quantity && pledge) || error

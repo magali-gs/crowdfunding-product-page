@@ -13,16 +13,19 @@
 	&__title {
 		font-size: 1.5rem;
 		grid-area: title;
+		@media screen and (max-width: 350px) {
+			font-size: 1.25rem;
+		}
 	}
 	&__descrip {
 		grid-area: content;
 	}
 	@media screen and (max-width: 800px) {
 		display: grid;
-		grid-template-areas: 
-		"title closebtn"
-		"content content"
-		"cards cards";
+		grid-template-areas:
+			"title closebtn"
+			"content content"
+			"cards cards";
 		width: 85vw;
 		padding: 32px 24px;
 		top: 7rem;
@@ -50,4 +53,3 @@
 		grid-area: cards;
 	}
 }
-

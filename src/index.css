@@ -1,22 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
 	box-sizing: border-box;
 	margin: 0;
 	font-size: 16px;
-	color: #7A7A7A;
+	color: #7a7a7a;
 	line-height: 30px;
-
 }
 
 body {
 	background-color: #fafafa;
 }
 
-h1, h2, h3, h4, h5, h6, button {
-	font-family: 'Roboto', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+	font-family: "Roboto", sans-serif;
 	color: #000;
 }
 
 p {
 	font-family: "Commissioner", "sans-serif";
+}
+
+@media screen and (max-width: 800px) {
+	* {
+		font-size: 14px;
+		line-height: 24px;
+	}
 }
