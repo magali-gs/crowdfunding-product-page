@@ -23,14 +23,16 @@ Users should be able to:
 - See the number of total backers increment by one after confirming a pledge
 - Toggle whether or not the product is bookmarked
 
+
 ### Screenshot
 
-![](./screenshot.jpg)
+![Full homepage](src/assets/screenshot.png)
 
 
 ### Links
 
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
 
 ### Built with
 
