@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Site URL here](http://localhost:3000/crowdfunding-product-page)
+- Live Site URL: [Site URL here](https://magali-gs.github.io/crowdfunding-product-page/)
 
 
 ### Built with
