@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "../components/header/header.component";
 import IntroModal from "../components/intro-modal/intro-modal.component";
 import DetailsModal from "../components/details-modal/details-modal.component";
@@ -36,7 +36,7 @@ const Homepage = () => {
 		newProject.options.forEach((option) => {
 			if (option.name === cause) option.quantity -= 1;
 		});
-		console.log(typeof value)
+
 		setProject(newProject)
 	};
 

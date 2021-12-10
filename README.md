@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Site URL here](http://localhost:3000/crowdfunding-product-page)
 
 
 ### Built with
